@@ -3,7 +3,7 @@
 require("./vendor/autoload.php");
 
 use App\Log;
-use NasimTelecom\Simotel\Simotel;
+use Simotel\Simotel;
 
 $log= new Log;
 

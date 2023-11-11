@@ -8,7 +8,7 @@
     ],
     "require": {
         "guzzlehttp/guzzle": "^7.5",
-        "nasimtelecom/simotel-php-connect": "dev-main",
+        "simotel/simotel-php-connect": "^4.2",
         "monolog/monolog": "^3.2"
     },
     "autoload": {
