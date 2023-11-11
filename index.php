@@ -18,7 +18,7 @@ try {
     // $log->info($res);
     $logger = new Logger("daily");
 
-    $stream_handler = new StreamHandler(__DIR__ . '/logs.log', Logger::DEBUG);
+    $stream_handler = new StreamHandler('logs.log', Logger::DEBUG);
     $logger->pushHandler($stream_handler);
 
     $logger->info($res);
@@ -31,7 +31,7 @@ $logFile = 'logs.log';
 $logContent = file_get_contents($logFile);
 
 // استخراج تمام لاگ‌ها با استفاده از Regex
-$pattern = '/\[(.*?)\] name.(.*?): (.*?})/';
+$pattern = '/\[(.*?)\] daily.(.*?): (.*?})/';
 preg_match_all($pattern, $logContent, $matches, PREG_SET_ORDER);
 
 
