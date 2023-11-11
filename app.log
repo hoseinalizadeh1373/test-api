@@ -1,0 +1,4 @@
+[2023-11-11T13:28:27.029785+00:00] daily.INFO: This file has been executed. [] []
+[2023-11-11T13:30:21.273708+00:00] daily.INFO: This file has been executed. [] []
+[2023-11-11T13:30:36.691194+00:00] daily.INFO: {"success":1,"message":"If the 'Ping' event is enabled in the settings menu, you'll receive it when it's sent","data":null} [] []
+[2023-11-11T13:31:16.759238+00:00] daily.INFO: {"success":1,"message":"If the 'Ping' event is enabled in the settings menu, you'll receive it when it's sent","data":null} [] []
