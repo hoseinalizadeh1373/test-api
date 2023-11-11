@@ -18,7 +18,7 @@ try {
     // $log->info($res);
     $logger = new Logger("daily");
 
-    $stream_handler = new StreamHandler(__DIR__ . '/app.log', Logger::DEBUG);
+    $stream_handler = new StreamHandler(__DIR__ . '/logs.log', Logger::DEBUG);
     $logger->pushHandler($stream_handler);
 
     $logger->info($res);
@@ -35,6 +35,21 @@ $pattern = '/\[(.*?)\] name.(.*?): (.*?})/';
 preg_match_all($pattern, $logContent, $matches, PREG_SET_ORDER);
 
 
+// $logFile = "logs.log";
+// $content = file_get_contents($logFile);
+
+// // قالب بندی کردن محتویات فایل به عنوان صفحه HTML
+// $htmlContent = "<html>
+//     <head>
+//         <title>محتویات فایل لاگ</title>
+//     </head>
+//     <body>
+//         <pre>" . htmlentities($content) . "</pre>
+//     </body>
+// </html>";
+
+// // نمایش صفحه HTML
+// echo $htmlContent;
 
 ?>
 
@@ -96,7 +111,20 @@ https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js
 </table>
   </body>
 </html>
-
+<!-- <script>
+setInterval(function(){
+    $.ajax({
+          url: "logs.log", // فایل PHP برای دریافت محتویات فایل لاگ
+          method: "GET",
+          success: function (response) {
+            $("#logContents").html(response); // اضافه کردن محتویات به قسمت HTML
+          },
+          error: function () {
+            alert("خطا در دریافت محتویات فایل لاگ!");
+          },
+        });
+      
+},2000); -->
 <script>
 
 </script>

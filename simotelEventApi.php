@@ -8,8 +8,7 @@ use Monolog\Logger; // The Logger instance
 use Monolog\Handler\StreamHandler;
 
 $simotel = new Simotel();
-
-
+$log = new Log();
 
 $simotel->eventApi()->addListener('Ping', function ($data) {
     $log = new Log();

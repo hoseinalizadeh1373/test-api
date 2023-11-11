@@ -2,7 +2,7 @@
 
 namespace App\Simotel\SmartApi;
 
-use \NasimTelecom\Simotel\SmartApi\Commands;
+use \Simotel\SmartApi\Commands;
 
 class SmartApiApp{
     
