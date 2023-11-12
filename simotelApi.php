@@ -14,7 +14,7 @@ if(file_exists('data.json')){
     $config = $data;
 }
 
-$simotel = new Simotel($data);
+$simotel = new Simotel($config);
 
 try {
     $res = $simotel->connect("setting/ping/act", [
