@@ -8,7 +8,12 @@ use Simotel\Simotel;
 $log = new Log();
 
 $config = require("config.php");
-$simotel = new Simotel($config);
+if(file_exists('data.json')){
+    $jsonString = file_get_contents('data.json');
+    $data = json_decode($jsonString, true);
+}
+
+$simotel = new Simotel($data);
 
 try {
     $res = $simotel->connect("setting/ping/act", [

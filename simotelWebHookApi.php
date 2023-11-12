@@ -22,5 +22,4 @@ $simotel->eventApi()->addListener('Ping', function ($json) {
     $logger->info($json);
 });
 
-
 $simotel->eventApi()->dispatch($data['event_name'], $_REQUEST);
