@@ -39,8 +39,13 @@ $(document).ready(function() {
 });
 
 function updateLogTable() {
-    fetch('logs.log') // نوشتن نام فایل لاگ در این قسمت
-        .then(response => response.text())
+    fetch('logs.log')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('فایل مورد نظر یافت نشد');
+            }
+            return response.text();
+        })
         .then(data => {
             var logContent = data.split("\n");
             var tableBody = $('#logTable tbody');
@@ -53,6 +58,9 @@ function updateLogTable() {
 
                 tableBody.append(row);
             });
+        })
+        .catch(error => {
+            console.error(error); // جهت نمایش خطا در کنسول مرورگر
         });
 }
 </script>
