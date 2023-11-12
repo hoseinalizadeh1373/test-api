@@ -2,7 +2,7 @@
 
 require("./vendor/autoload.php");
 
-use NasimTelecom\Simotel\Simotel;
+use Simotel\Simotel;
 use App\Log;
 
 $requestData = $_REQUEST;

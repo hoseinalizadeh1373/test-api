@@ -1,15 +1,8 @@
-<?php
-
-require("./vendor/autoload.php");
-require("simotelApi.php");
-
-?>
-
 <html>
   <head>
   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>محتویات فایل لاگ</title>
+    <title>محتویات فایل webhook ping</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
@@ -39,7 +32,7 @@ $(document).ready(function() {
 });
 
 function updateLogTable() {
-    fetch('logs.log') // نوشتن نام فایل لاگ در این قسمت
+    fetch('ping.log') // نوشتن نام فایل لاگ در این قسمت
         .then(response => response.text())
         .then(data => {
             var logContent = data.split("\n");
