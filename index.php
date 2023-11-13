@@ -52,17 +52,7 @@ https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js
             </thead>
             <tbody></tbody>
         </table>
-        <button type="button" class="btn btn-primary" id="toastbtn">Show Toast</button>
   
-  <div class="toast">
-    <div class="toast-header">
-      <strong class="me-auto">Toast Header</strong>
-      <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
-    </div>
-    <div class="toast-body">
-      <p>Some text inside the toast body</p>
-    </div>
-  </div>
 <script>
 $(document).ready(function() {
   
