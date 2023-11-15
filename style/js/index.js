@@ -9,7 +9,6 @@ document.getElementById("dataForm").addEventListener("submit", function(event) {
     type: "POST",
     data: formData, // ارسال داده‌های فرم
     success: function(response) {
-        console.log(response); // پاسخ دریافتی از سمت سرور
         alert("با موفقیت ذخیره شد.");
     }
 });
@@ -29,7 +28,7 @@ document.getElementById("status_ping").innerText="sending ...";
             updateLogTable();
         },
         error :function(error){
-            alert("e");
+            document.getElementById("status_ping").innerText="error ";
         },
 
     });
@@ -67,7 +66,7 @@ var tableBody = $(id_table + ' tbody');
 logContent.forEach(function(log, index) {
 
 if (index >= logContent.length - 4) {
-    alert(regex + "  "+id_table);
+    
     var logRegex    = regex;
     var logMatch = log.match(logRegex);
     var row = createTableRow(logMatch);

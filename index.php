@@ -156,7 +156,7 @@ function updateLogTable() {
     fetch('logs.log')
         .then(response => {
             if (!response.ok) {
-                throw new Error('فایل مورد نظر یافت نشد');
+alert("ss");
             }
             return response.text();
         })
