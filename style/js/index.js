@@ -67,8 +67,8 @@ var tableBody = $(id_table + ' tbody');
 logContent.forEach(function(log, index) {
 
 if (index >= logContent.length - 4) {
-    var logRegex= /\[(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{6}\+\d{2}:\d{2})\]\s(.+): (.+)/;
-    // var logRegex    = regex;
+    
+    var logRegex    = regex;
     var logMatch = log.match(logRegex);
     var row = createTableRow(logMatch);
     previousRows.push(row);
