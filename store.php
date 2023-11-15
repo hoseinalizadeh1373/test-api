@@ -1,9 +1,9 @@
 <?php
 // دریافت مقادیر ارسال شده از طریق POST
 $serverAddress = $_POST['serverAddress'];
-$token = $_POST['token'];
-$username = $_POST['username'];
-$password = $_POST['password'];
+$token = $_POST['token']??"";
+$username = $_POST['username']??"";
+$password = $_POST['password']??"";
 $tokenType = $_POST['tokenType'];
 
 // ایجاد یک آرایه با مقادیر دریافتی

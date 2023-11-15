@@ -29,6 +29,6 @@ try {
 
 } catch(Exception $ex) {
     $log->error($ex->getMessage());
-    die($ex->getMessage());
+    // die($ex->getMessage());
 }
 ?>

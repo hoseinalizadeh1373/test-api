@@ -24,7 +24,7 @@ return [
         ],
     ],
     'simotelApi' => [
-        'api_auth' => 'token',
+        'api_auth' => 'both',
         'api_user' => 'hosein',
         'api_pass' => 'Hosein101',
         'api_key' => 'v444dbrVrLHvlBYTG6I6rcJ9Bseuttk8f309Etx7hv6OEjeMsD',

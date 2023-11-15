@@ -45,39 +45,7 @@ https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js
             <tbody></tbody>
         </table>
 <script>
-$(document).ready(function() {
-    updateLogTable(); // برای بارگذاری اولیه جدول
 
-    setInterval(function() {
-        updateLogTable(); // برای به روزرسانی جدول هر ۵ ثانیه
-    }, 5000);
-});
-
-function updateLogTable() {
-    fetch('ping.log')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('فایل مورد نظر یافت نشد');
-            }
-            return response.text();
-        })
-        .then(data => {
-            var logContent = data.split("\n");
-            var tableBody = $('#logTable tbody');
-            tableBody.empty();
-
-            logContent.forEach(function(log, index) {
-                var row = $('<tr>');
-                row.append($('<td>').text(index + 1));
-                row.append($('<td>').text(log));
-
-                tableBody.append(row);
-            });
-        })
-        .catch(error => {
-            console.error(error); // جهت نمایش خطا در کنسول مرورگر
-        });
-}
 </script>
 
 </body>
