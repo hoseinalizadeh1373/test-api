@@ -16,7 +16,7 @@ $simotel->eventApi()->addListener('Ping', function ($json) {
     $json = file_get_contents('php://input');
 
     $logger = new Logger("daily");
-    $stream_handler = new StreamHandler(__DIR__ . '/ping.log', Logger::DEBUG);
+    $stream_handler = new StreamHandler(__DIR__ . '/pings.log', Logger::DEBUG);
     
     $logger->pushHandler($stream_handler);
     $logger->info($json);
