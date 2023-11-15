@@ -166,6 +166,8 @@ alert("ss");
         })
         .catch(error => {
             // console.error(error); // جهت نمایش خطا در کنسول مرورگر
+            alert(error);
+            console.log(error);
         });
 }
 </script>
