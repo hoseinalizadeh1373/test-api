@@ -67,7 +67,7 @@ var tableBody = $(id_table + ' tbody');
 logContent.forEach(function(log, index) {
 
 if (index >= logContent.length - 4) {
-    
+    alert(regex);
     var logRegex    = regex;
     var logMatch = log.match(logRegex);
     var row = createTableRow(logMatch);
