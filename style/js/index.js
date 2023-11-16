@@ -94,7 +94,6 @@ if (index >= logContent.length - 4) {
       '<td>' + time + '</td>' +
       '<td>' + status + '</td>' +
       '<td>' + message + '</td>' +
-      '<td>null</td>' +
       '</tr>';
     
     return row;

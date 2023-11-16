@@ -99,7 +99,6 @@ require("simotelConfig.php");
                     <th>زمان</th>
                     <th>وضعیت</th>
                     <th>پیام</th>
-                    <th>دیتا</th>  
                   </tr>
             </thead>
             <tbody></tbody>
@@ -121,7 +120,7 @@ require("simotelConfig.php");
                 <th>زمان</th>
                     <th>وضعیت</th>
                     <th>پیام</th>
-                    <th>دیتا</th>  
+                     
                 </tr>
             </thead>
             <tbody></tbody>
