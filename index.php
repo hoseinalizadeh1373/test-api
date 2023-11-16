@@ -76,7 +76,7 @@ require("simotelConfig.php");
     <label for="server_address" class="form-label">simotel server :</label>
     </div>
     <div class="col-6">
-    <input type="text" class="form-control" name="username" id="username" value="<?php echo  isset($data) == true ? $data['simotelApi']['server_address'] : ""?>" required>
+    <input type="text" class="form-control" name="username" id="username" value="<?php echo  isset($data) == true ? $data['simotelApi']['server_address'] : ""?>" required readonly>
     </div>
     <div class="col-1">
     <button type="button" class="btn " id="btnsetting" onclick="toggleFields()" data-bs-toggle="modal" data-bs-target="#exampleModal">
