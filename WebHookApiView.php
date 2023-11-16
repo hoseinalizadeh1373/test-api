@@ -35,15 +35,7 @@ https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js
     </div>
   </div>
 </nav>
-  <table id="logTable" class="table">
-            <thead>
-                <tr>
-                    <th>ردیف</th>
-                    <th>محتوا</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
+  
 <script>
 
 </script>

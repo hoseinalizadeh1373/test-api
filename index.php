@@ -161,8 +161,48 @@ function updateLogTable() {
             return response.text();
         })
         .then(data => {
-          var regexx= /\[(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{6}\+\d{2}:\d{2})\]\s(.+): (.+)/;
-           getData(data,'#logTable',regexx);
+          // var regexx= /\[(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{6}\+\d{2}:\d{2})\]\s(.+): (.+)/;
+          //  getData(data,'#logTable',regexx);
+
+          var previousRows = [];
+var logContent = data.split("\n");
+var tableBody = $(id_table + ' tbody');
+
+logContent.forEach(function(log, index) {
+
+if (index >= logContent.length - 4) {
+    
+    var logRegex    =  /\[(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{6}\+\d{2}:\d{2})\]\s(.+): (.+)/;
+    var logMatch = log.match(logRegex);
+    var row = createTableRow(logMatch);
+    previousRows.push(row);
+    previousRows.sort();
+    previousRows.reverse();
+    tableBody.empty();
+    previousRows.forEach(function(row) {
+        tableBody.append(row);
+    });
+        }
+    });
+
+    function createTableRow(logMatch) {
+    
+    var timestamp = logMatch[1]; 
+    var date = timestamp.split("T")[0];
+    var time = timestamp.split("T")[1].split('.')[0];
+    var status = logMatch[2];
+    var message = logMatch[3];
+
+    var row = '<tr>' +
+      '<td>' + date + '</td>' +
+      '<td>' + time + '</td>' +
+      '<td>' + status + '</td>' +
+      '<td>' + message + '</td>' +
+      '<td>null</td>' +
+      '</tr>';
+    
+    return row;
+  }
         })
         .catch(error => {
             // console.error(error); // جهت نمایش خطا در کنسول مرورگر
