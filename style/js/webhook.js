@@ -16,6 +16,7 @@ function updatepingTable() {
         })
         .then(data => {
            var regex =/\[(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{6}(?:[\+\-]\d{2}:\d{2})?)]\s([^:]+):\s(.+)/;
+                      ///\[(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{6}\+\d{2}:\d{2})\]\s(.+): (.+)/
              getData(data,"#pingTable",regex);
         })
         .catch(error => {
