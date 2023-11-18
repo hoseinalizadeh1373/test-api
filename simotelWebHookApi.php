@@ -20,6 +20,7 @@ $simotel->eventApi()->addListener('Ping', function ($json) {
     
     $logger->pushHandler($stream_handler);
     $logger->info($json);
+    echo "<script type='text/javascript'> updatepingTable();</script>";
 });
 
 $simotel->eventApi()->dispatch($data['event_name'], $_REQUEST);
