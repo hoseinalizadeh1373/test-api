@@ -18,8 +18,14 @@ require("simotelConfig.php");
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body class="" >
-<div class="container">
-  <div class="row">
+<div class="container ">
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-5">Simotel Server Requests</h1>
+    <p class="lead text-secondary bg-transparent-subtle ">Here are the preliminaries for testing  Simotel Api and Simotel WebHookApi requests To/from the Simotel server. </p>
+  </div>
+</div>
+  <div class="row ">
   <div class="col-md-6">
         <div class="card">
           <div class="card-header">
@@ -30,7 +36,7 @@ require("simotelConfig.php");
           <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Simotel Config</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -95,10 +101,10 @@ require("simotelConfig.php");
   <table id="logTable" class="table">
             <thead>
                 <tr>
-                    <th>تاریخ</th>
-                    <th>زمان</th>
-                    <th>وضعیت</th>
-                    <th>پیام</th>
+                    <th>date</th>
+                    <th>time</th>
+                    <th>status</th>
+                    <th>message</th>
                   </tr>
             </thead>
             <tbody></tbody>
@@ -116,11 +122,10 @@ require("simotelConfig.php");
           <table id="pingTable" class="table">
             <thead>
                 <tr>
-                <th>تاریخ</th>
-                <th>زمان</th>
-                    <th>وضعیت</th>
-                    <th>پیام</th>
-                     
+                <th>date</th>
+                <th>time</th>
+                <th>status</th>
+                <th>message</th>
                 </tr>
             </thead>
             <tbody></tbody>
