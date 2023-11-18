@@ -136,14 +136,17 @@ require("simotelConfig.php");
     </div>
 
     <div class="row my-5">
-      <div class="col-md-4">
+      <div class="col-md-3 p-2">
         <button class="btn btn-info">How to Generate Token</button>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-3 p-2">
         <button class="btn btn-info">How to Create Api Account</button>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-3 p-2">
         <button class="btn btn-info">How to See Api Log</button>
+      </div>
+      <div class="col-md-3 p-2">
+        <button class="btn btn-info">How to Enable Ping Request</button>
       </div>
     </div>
   </div>
