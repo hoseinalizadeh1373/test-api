@@ -27,6 +27,7 @@ document.getElementById("status_ping").innerText="sending ...";
             
             document.getElementById("status_ping").innerText="";
             updateLogTable();
+            updatepingTable();
         },
         error :function(error){
             document.getElementById("status_ping").innerText="error ";
