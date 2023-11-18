@@ -42,11 +42,11 @@ require("simotelConfig.php");
       <div class="modal-body">
       <form id="dataForm" method="post">
             <div class="mb-3">
-                <label for="serverAddress" class="form-label">آدرس سرور:</label>
-                <input type="text" class="form-control" name="serverAddress" id="serverAddress" required value="<?php echo  isset($data) == true ? $data['simotelApi']['server_address'] : ""?>">
+                <label for="serverAddress" class="form-label"> server address:</label>
+                <input type="text" class="form-control" name="serverAddress" id="serverAddress" required value="<?php echo  isset($data) == true ? $data['simotelApi']['server_address'] : ""?>"  placeholder="http://192.168.1.1/api/v4">
             </div>
             <div class="mb-3">
-            <label for="tokenType" class="form-label">نوع احراز هویت:</label>
+            <label for="tokenType" class="form-label">authentication type:</label>
                 <select class="form-control" id="tokenType" name="tokenType"  required onchange="toggleFields()">
                 
                     <option value="token" <?php echo(isset($data) == true) && $data['simotelApi']['api_auth'] == "token" ? "selected" : ""?>>token</option>
@@ -56,19 +56,19 @@ require("simotelConfig.php");
                 </select>
             </div>
             <div class="mb-3" id="div-token">
-                <label for="token" class="form-label" >توکن:</label>
-                <input type="text" class="form-control" name="token" id="token" value="<?php echo  isset($data) == true ? $data['simotelApi']['api_key'] : ""?>" required>
+                <label for="token" class="form-label" >token:</label>
+                <input type="text" class="form-control" name="token" id="token" value="<?php echo  isset($data) == true ? $data['simotelApi']['api_key'] : ""?>" required placeholder="v444dbrVrLHvlBYTG6I6rcJ9Bseuttk8f309Etx7hdsddssD">
             </div>
             <div class="mb-3" id="div-username">
-                <label for="username" class="form-label">نام کاربری:</label>
-                <input type="text" class="form-control" name="username" id="username" value="<?php echo  isset($data) == true ? $data['simotelApi']['api_user'] : ""?>" required>
+                <label for="username" class="form-label">username:</label>
+                <input type="text" class="form-control" name="username" id="username" value="<?php echo  isset($data) == true ? $data['simotelApi']['api_user'] : ""?>" required placeholder="hosein">
             </div>
             <div class="mb-3" id="div-password">
-                <label for="password" class="form-label">رمز عبور:</label>
-                <input type="password" class="form-control" name="password" id="password" value="<?php echo  isset($data) == true ? $data['simotelApi']['api_pass'] : "" ?>" required>
+                <label for="password" class="form-label">password:</label>
+                <input type="password" class="form-control" name="password" id="password" value="<?php echo  isset($data) == true ? $data['simotelApi']['api_pass'] : "" ?>" required >
             </div>
            
-            <button type="submit" class="btn btn-primary">ثبت</button>
+            <button type="submit" class="btn btn-primary">confim</button>
         </form>
 
       </div>
@@ -82,7 +82,7 @@ require("simotelConfig.php");
     <label for="server_address" class="form-label">simotel server :</label>
     </div>
     <div class="col-6">
-    <input type="text" class="form-control" name="username" id="username" value="<?php echo  isset($data) == true ? $data['simotelApi']['server_address'] : ""?>" required readonly>
+    <input type="text" class="form-control" name="username" id="username" value="<?php echo  isset($data) == true ? $data['simotelApi']['server_address'] : ""?>" required readonly placeholder="http://192.168.1.1/api/v4">
     </div>
     <div class="col-1">
     <button type="button" class="btn " id="btnsetting" onclick="toggleFields()" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -92,7 +92,7 @@ require("simotelConfig.php");
   </div>
   <div class="row align-items-center mt-2">
     <div class="col-4">
-      <button class="btn btn-info" id="btn_send_ping">send request<i class="m-2 bi bi-send" ></i></button>
+      <button class="btn btn-primary" id="btn_send_ping">send request<i class="m-2 bi bi-send" ></i></button>
     </div>
     <div class="col-3">
       <span id="status_ping"> </span>
@@ -132,6 +132,18 @@ require("simotelConfig.php");
         </table>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="row my-5">
+      <div class="col-md-4">
+        <button class="btn btn-info">How to Generate Token</button>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-info">How to Create Api Account</button>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-info">How to See Api Log</button>
       </div>
     </div>
   </div>
