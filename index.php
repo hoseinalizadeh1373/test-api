@@ -3,7 +3,6 @@
 require("./vendor/autoload.php");
 require("simotelApi.php");
 require("simotelConfig.php");
-require("simotelWebHookApiphp");
 
 ?>
 <html>
