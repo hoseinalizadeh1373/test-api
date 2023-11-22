@@ -130,6 +130,10 @@ require("simotelConfig.php");
             </thead>
             <tbody></tbody>
         </table>
+       <div class="alert alert-info" role="alert">
+       Receives and displays the latest webhook every 5 seconds
+       </div>
+    
           </div>
         </div>
       </div>

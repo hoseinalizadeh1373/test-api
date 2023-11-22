@@ -110,7 +110,7 @@ if (index >= logContent.length - 4) {
       '<td>' + date + '</td>' +
       '<td>' + time + '</td>' +
       '<td>' + status + '</td>' +
-      '<td>' + message + '</td>' +
+      '<td class="col-md-6">' + message + '</td>' +
       '</tr>';
     
     return row;
