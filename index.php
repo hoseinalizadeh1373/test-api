@@ -104,7 +104,7 @@ require("simotelConfig.php");
                     <th>date</th>
                     <th>time</th>
                     <th>status</th>
-                    <th>message</th>
+                    <th>Result</th>
                   </tr>
             </thead>
             <tbody></tbody>
@@ -116,7 +116,7 @@ require("simotelConfig.php");
       <div class="col-md-6">
         <div class="card">
           <div class="card-header">
-            <h1>Reply From Server</h1>
+            <h1>Response From Server</h1>
           </div>
           <div class="card-body">
           <table id="pingTable" class="table">
@@ -125,7 +125,7 @@ require("simotelConfig.php");
                 <th>date</th>
                 <th>time</th>
                 <th>status</th>
-                <th>message</th>
+                <th>Result</th>
                 </tr>
             </thead>
             <tbody></tbody>

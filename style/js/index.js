@@ -36,6 +36,9 @@ document.getElementById("status_ping").innerText="sending ...";
     });
 });
 
+
+
+
 function toggleFields() {
    
     var selectElement = document.getElementById('tokenType');
@@ -87,7 +90,7 @@ if (index >= logContent.length - 4) {
     var timestamp = logMatch[1]; 
     var date = timestamp.split("T")[0];
     var time = timestamp.split("T")[1].split('.')[0];
-    var status = logMatch[2];
+    var status = logMatch[2].split('.')[1];
     var message = logMatch[3];
 
     var row = '<tr>' +
