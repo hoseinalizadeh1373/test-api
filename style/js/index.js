@@ -1,7 +1,7 @@
 
 document.getElementById("dataForm").addEventListener("submit", function(event) {
     event.preventDefault(); // جلوگیری از ارسال فرم به صفحه دیگر
-
+   
     var formData = $(this).serialize();
 
     $.ajax({
@@ -11,6 +11,11 @@ document.getElementById("dataForm").addEventListener("submit", function(event) {
     success: function(response) {
         
         alert("با موفقیت ذخیره شد.");
+        const closeButton = document.querySelector('.btn-close');
+        if (closeButton) {
+           
+          closeButton.click();
+        }
     }
 });
 
@@ -91,7 +96,12 @@ if (index >= logContent.length - 4) {
     var date = timestamp.split("T")[0];
     var time = timestamp.split("T")[1].split('.')[0];
     var status = logMatch[2].split('.')[1];
-    var message = logMatch[3];
+    
+    
+     var message = logMatch[3].includes('"event_name": "Ping"') ? logMatch[3].event_name : logMatch[3];
+       
+    
+    
 
     var row = '<tr>' +
       '<td>' + date + '</td>' +
