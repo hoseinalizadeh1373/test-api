@@ -98,7 +98,10 @@ if (index >= logContent.length - 4) {
     var status = logMatch[2].split('.')[1];
     
     
-     var message = logMatch[3].includes('"event_name": "Ping"') ? logMatch[3].event_name : logMatch[3];
+     var message = logMatch[3].includes('"event_name": "Ping"') ? 
+     logMatch[3].split(',')[0]+","+logMatch[3].split(',')[2] :
+     logMatch[3];
+
        
     
     
