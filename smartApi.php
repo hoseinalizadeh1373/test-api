@@ -5,14 +5,23 @@ require("./vendor/autoload.php");
 use Simotel\Simotel;
 use App\Log;
 
+
+$log = new Log;
+$log->info("ss");
 $requestData = $_REQUEST;
 $config = require("config.php");
-$log = new Log;
+
 try{
-    $simotel = new Simotel($config);
+    
+    $config["smartApi"]["apps"] = [
+        'test' => RestOfApps::class,
+      ];
+      $simotel = new Simotel($config);
     $res = $simotel->smartApi($requestData)->toJson();
-    header('Content-Type: application/json; charset=utf-8');
-    echo $res;
+    // header('Content-Type: application/json; charset=utf-8');
+    // echo $res;
+
+    $log->info($requestData);
 }
 catch(Exception $ex){
     $errorMessage = $ex->getMessage();
